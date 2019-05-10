@@ -9,6 +9,8 @@
 #import "RootTableViewController.h"
 #import "ViewController.h"
 #import "NormalViewController.h"
+#import "RACSubjectDemoViewController.h"
+#import <ReactiveObjC/ReactiveObjC.h>s
 
 @interface RootTableViewController ()
 
@@ -34,13 +36,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 2;
+    return 5;
 }
 
 
@@ -61,10 +61,20 @@
         cell.textLabel.text = @"RAC定时器";
         cell.detailTextLabel.text = @"";
     }
+    else if(indexPath.row==2){
+        cell.textLabel.text = @"RACSubject和RACReplaySubject用法";
+        cell.detailTextLabel.text = @"";
+    }
+    else if(indexPath.row==3){
+        cell.textLabel.text = @"RACMulticastConnection";
+        cell.detailTextLabel.text = @"";
+    }
+    else if(indexPath.row==4){
+        cell.textLabel.text = @"RACCommand";
+        cell.detailTextLabel.text = @"";
+    }
     
     return cell;
-
-
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -79,6 +89,24 @@
         UIViewController *timerVC = [story instantiateViewControllerWithIdentifier:@"TimerVC"];
         //由navigationController推向我们要推向的view
         [self.navigationController pushViewController:timerVC animated:YES];
+    }
+    else if(indexPath.row == 2){
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController *subjectVC = [story instantiateViewControllerWithIdentifier:@"RACSubjectVC"];
+        //由navigationController推向我们要推向的view
+        [self.navigationController pushViewController:subjectVC animated:YES];
+    }
+    else if(indexPath.row == 3){
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController * networkVC = [story instantiateViewControllerWithIdentifier:@"RACNetwork"];
+        //由navigationController推向我们要推向的view
+        [self.navigationController pushViewController:networkVC animated:YES];
+    }
+    else if(indexPath.row == 4){
+        UIStoryboard *story = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UIViewController * commandVC = [story instantiateViewControllerWithIdentifier:@"RACCommandVC"];
+        //由navigationController推向我们要推向的view
+        [self.navigationController pushViewController:commandVC animated:YES];
     }
 }
 

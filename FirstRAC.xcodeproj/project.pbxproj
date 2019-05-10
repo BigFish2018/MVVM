@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1EB656D8A8C68F601EB50353 /* libPods-FirstRAC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D00E8EB017728E9E0D633A5E /* libPods-FirstRAC.a */; };
+		691F6462228188970026DD5D /* RACCommandViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 691F6461228188970026DD5D /* RACCommandViewController.m */; };
 		694CCB11226DACBE0032F0DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CCB10226DACBE0032F0DD /* AppDelegate.m */; };
 		694CCB14226DACBE0032F0DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 694CCB13226DACBE0032F0DD /* ViewController.m */; };
 		694CCB17226DACBE0032F0DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 694CCB15226DACBE0032F0DD /* Main.storyboard */; };
@@ -18,12 +19,17 @@
 		6977DC8C2270B905000F26DB /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6977DC8B2270B905000F26DB /* RootTableViewController.m */; };
 		6977DC8F227160D8000F26DB /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6977DC8E227160D8000F26DB /* NormalViewController.m */; };
 		6977DCAE22720B4E000F26DB /* TestObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 6977DCAD22720B4E000F26DB /* TestObj.m */; };
+		6987DD852283D4C900E31636 /* CommandViewModal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6987DD842283D4C900E31636 /* CommandViewModal.m */; };
 		6988A7A82275A3130011EE25 /* MyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6988A7A72275A3130011EE25 /* MyView.m */; };
+		6988A7AB2277FFA30011EE25 /* RACSubjectDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6988A7AA2277FFA30011EE25 /* RACSubjectDemoViewController.m */; };
+		6988A7AE228012BF0011EE25 /* RACNetworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6988A7AD228012BF0011EE25 /* RACNetworkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		105366187ABBBE3896325E4D /* Pods-FirstRAC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstRAC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FirstRAC/Pods-FirstRAC.debug.xcconfig"; sourceTree = "<group>"; };
 		2B230889265AB2E458381452 /* Pods-FirstRAC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstRAC.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirstRAC/Pods-FirstRAC.release.xcconfig"; sourceTree = "<group>"; };
+		691F6460228188970026DD5D /* RACCommandViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACCommandViewController.h; sourceTree = "<group>"; };
+		691F6461228188970026DD5D /* RACCommandViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACCommandViewController.m; sourceTree = "<group>"; };
 		694CCB0C226DACBE0032F0DD /* FirstRAC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstRAC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		694CCB0F226DACBE0032F0DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		694CCB10226DACBE0032F0DD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,15 +40,21 @@
 		694CCB1B226DACBE0032F0DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		694CCB1D226DACBE0032F0DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		694CCB1E226DACBE0032F0DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		694CCB25226DAE0C0032F0DD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		694CCB25226DAE0C0032F0DD /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6977DC8A2270B905000F26DB /* RootTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
 		6977DC8B2270B905000F26DB /* RootTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
 		6977DC8D227160D8000F26DB /* NormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
 		6977DC8E227160D8000F26DB /* NormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
 		6977DCAC22720B4E000F26DB /* TestObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestObj.h; sourceTree = "<group>"; };
 		6977DCAD22720B4E000F26DB /* TestObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestObj.m; sourceTree = "<group>"; };
+		6987DD832283D4C900E31636 /* CommandViewModal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandViewModal.h; sourceTree = "<group>"; };
+		6987DD842283D4C900E31636 /* CommandViewModal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandViewModal.m; sourceTree = "<group>"; };
 		6988A7A62275A3130011EE25 /* MyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyView.h; sourceTree = "<group>"; };
 		6988A7A72275A3130011EE25 /* MyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyView.m; sourceTree = "<group>"; };
+		6988A7A92277FFA30011EE25 /* RACSubjectDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACSubjectDemoViewController.h; sourceTree = "<group>"; };
+		6988A7AA2277FFA30011EE25 /* RACSubjectDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACSubjectDemoViewController.m; sourceTree = "<group>"; };
+		6988A7AC228012BF0011EE25 /* RACNetworkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACNetworkViewController.h; sourceTree = "<group>"; };
+		6988A7AD228012BF0011EE25 /* RACNetworkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACNetworkViewController.m; sourceTree = "<group>"; };
 		D00E8EB017728E9E0D633A5E /* libPods-FirstRAC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FirstRAC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -106,6 +118,14 @@
 				694CCB15226DACBE0032F0DD /* Main.storyboard */,
 				6977DC8A2270B905000F26DB /* RootTableViewController.h */,
 				6977DC8B2270B905000F26DB /* RootTableViewController.m */,
+				6988A7A92277FFA30011EE25 /* RACSubjectDemoViewController.h */,
+				6988A7AA2277FFA30011EE25 /* RACSubjectDemoViewController.m */,
+				6988A7AC228012BF0011EE25 /* RACNetworkViewController.h */,
+				6988A7AD228012BF0011EE25 /* RACNetworkViewController.m */,
+				691F6460228188970026DD5D /* RACCommandViewController.h */,
+				691F6461228188970026DD5D /* RACCommandViewController.m */,
+				6987DD832283D4C900E31636 /* CommandViewModal.h */,
+				6987DD842283D4C900E31636 /* CommandViewModal.m */,
 				6988A7A62275A3130011EE25 /* MyView.h */,
 				6988A7A72275A3130011EE25 /* MyView.m */,
 				694CCB18226DACBE0032F0DD /* Assets.xcassets */,
@@ -243,10 +263,14 @@
 			files = (
 				694CCB14226DACBE0032F0DD /* ViewController.m in Sources */,
 				694CCB1F226DACBE0032F0DD /* main.m in Sources */,
+				6988A7AE228012BF0011EE25 /* RACNetworkViewController.m in Sources */,
 				694CCB11226DACBE0032F0DD /* AppDelegate.m in Sources */,
+				6988A7AB2277FFA30011EE25 /* RACSubjectDemoViewController.m in Sources */,
+				691F6462228188970026DD5D /* RACCommandViewController.m in Sources */,
 				6977DCAE22720B4E000F26DB /* TestObj.m in Sources */,
 				6977DC8F227160D8000F26DB /* NormalViewController.m in Sources */,
 				6977DC8C2270B905000F26DB /* RootTableViewController.m in Sources */,
+				6987DD852283D4C900E31636 /* CommandViewModal.m in Sources */,
 				6988A7A82275A3130011EE25 /* MyView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
