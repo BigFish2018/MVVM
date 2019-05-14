@@ -24,14 +24,15 @@
 - (RACCommand *)requestData {
     if (!_requestData) {
         @weakify(self);
-        _requestData = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString* input) {
+        _requestData = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSString* input) {          //execute的时候这个会执行  yuxg
             
             NSLog(@"这里是外层信号吗？");
             
             @strongify(self);
             NSDictionary *body = @{@"memberCode": input};
             // 进行网络操作，同时将这个操作封装成信号 return
-            return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            
+            RACSignal * signal =  [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
                 
                 NSLog(@"这里是内层信号吗？");
                 
@@ -44,6 +45,9 @@
                 
                 return nil;
             }];
+            
+            NSLog(@"%@",signal);
+            return signal;
         }];
     }
     return _requestData;
@@ -71,13 +75,18 @@
 - (void)subcribeCommandSignals {
     @weakify(self)
     // 1. 订阅外层信号
-    [self.requestData.executionSignals subscribeNext:^(RACSignal* innerSignal) {
+    [self.requestData.executionSignals subscribeNext:^(RACSignal* innerSignal) {        //execute的时候执行创建的时候传入的block，然后就会执行这个block。 yuxg
         @strongify(self)
+        
+        NSLog(@"外层信号的block被执行");                    //yuxg
         // 2. 订阅内层信号
-        [innerSignal subscribeNext:^(NSDictionary* x) {
+        [innerSignal subscribeNext:^(NSDictionary* x) {    //这个subscribeNext，会导致RACCommand对象创建的时候返回的RACSignal中的block被执行。yuxg
+            NSLog(@"内层信号的block被执行");                    //这个block在RACSignal创建的时候传入的block中，处理结束后被调用执行。
             self.data = x;
             self.requestStatus = HTTPRequestStatusEnd;
         }];
+        
+        NSLog(@"%@",innerSignal);
         
         self.error = nil;
         self.requestStatus = HTTPRequestStatusBegin;

@@ -29,7 +29,7 @@
 -(void)bindViewModel{
     @weakify(self)
     // 1.
-    [[RACObserve(_viewModel, requestStatus) skip:1] subscribeNext:^(NSNumber* x) {
+    [[RACObserve(_viewModel, requestStatus) skip:1] subscribeNext:^(NSNumber* x) {              //添加观察者  yuxg
         @strongify(self)
         switch ([x intValue]) {
             case HTTPRequestStatusBegin:
